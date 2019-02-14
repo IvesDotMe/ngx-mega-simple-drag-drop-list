@@ -1,0 +1,3 @@
+<div class="item" *ngFor="let item of items;let index = index;" megaSimpleDndList [items]="items" [index]="index" (dropped)="onDropped($event)">
+	{{item}}
+</div>
