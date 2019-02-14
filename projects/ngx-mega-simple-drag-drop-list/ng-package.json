@@ -1,0 +1,7 @@
+{
+	"$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+	"dest": "../../dist/ngx-mega-simple-drag-drop-list",
+	"lib": {
+		"entryFile": "src/src.ts"
+	}
+}
