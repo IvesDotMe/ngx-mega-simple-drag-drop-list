@@ -14,17 +14,20 @@ https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list
 npm i ngx-mega-simple-drag-drop-list
 ```
 
+app.module.ts
+
 ```typescript
 import { NgxMegaSimpleDragDropListModule } from 'ngx-mega-simple-drag-drop-list';
 
 @NgModule({
 	imports: [
-		BrowserModule,
 		NgxMegaSimpleDragDropListModule
 	],
 })
 
 ```
+
+app.component.ts
 
 ```typescript
 
@@ -36,7 +39,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	items = [1, 2, 3, 4, 5];
+	items = [1, 2, 3, 4, 5]; 
 
 	constructor() { }
 
@@ -48,6 +51,8 @@ export class AppComponent {
 }
 
 ```
+
+app.component.html
 
 ```html
 <div class="item" *ngFor="let item of items;let index = index;" megaSimpleDndList [items]="items" [index]="index" (dropped)="onDropped($event)">
