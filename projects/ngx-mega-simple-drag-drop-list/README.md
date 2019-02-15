@@ -1,24 +1,56 @@
+[![NPM](https://nodei.co/npm/ngx-mega-simple-drag-drop-list.png)](https://npmjs.org/package/ngx-mega-simple-drag-drop-list)
+
 # NgxMegaSimpleDragDropList
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+Simple Drag and Drop Reordable List
 
-## Code scaffolding
+##Demo
 
-Run `ng generate component component-name --project ngx-mega-simple-drag-drop-list` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-mega-simple-drag-drop-list`.
-> Note: Don't forget to add `--project ngx-mega-simple-drag-drop-list` or else it will be added to the default project in your `angular.json` file. 
+https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list
 
-## Build
+## Install
 
-Run `ng build ngx-mega-simple-drag-drop-list` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+npm i ngx-mega-simple-drag-drop-list
+```
 
-## Publishing
+```typescript
+import { NgxMegaSimpleDragDropListModule } from 'ngx-mega-simple-drag-drop-list';
 
-After building your library with `ng build ngx-mega-simple-drag-drop-list`, go to the dist folder `cd dist/ngx-mega-simple-drag-drop-list` and run `npm publish`.
+@NgModule({
+	imports: [
+		BrowserModule,
+		NgxMegaSimpleDragDropListModule
+	],
+})
 
-## Running unit tests
+```
 
-Run `ng test ngx-mega-simple-drag-drop-list` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
 
-## Further help
+import { Component } from '@angular/core';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@Component({
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+	items = [1, 2, 3, 4, 5];
+
+	constructor() { }
+
+	ngOnInit() {}
+
+	onDropped(newItems) {
+		this.items = newItems;
+	}
+}
+
+```
+
+```html
+<div class="item" *ngFor="let item of items;let index = index;" megaSimpleDndList [items]="items" [index]="index" (dropped)="onDropped($event)">
+	{{item}}
+</div>
+```

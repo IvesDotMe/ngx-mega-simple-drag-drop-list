@@ -1,8 +1,27 @@
 {
 	"name": "ngx-mega-simple-drag-drop-list",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list.git"
+	},
+	"homepage": "https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list#readme",
+	"readme": "https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list#readme",
+	"description": "Angular 2/3/4/5/6/7 Drag Drop Simple Reordable List Items",
 	"peerDependencies": {
 		"@angular/common": "^7.2.0",
 		"@angular/core": "^7.2.0"
-	}
+	},
+	"keywords": [
+		"ngx-mega-simple-drag-drop-list",
+		"drag",
+		"drop",
+		"dnd",
+		"list",
+		"reordable",
+		"simple",
+		"array"
+	  ],
+	  "license": "MIT",
+	  "author": "Ives.me"	
 }
