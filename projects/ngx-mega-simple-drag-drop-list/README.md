@@ -6,7 +6,7 @@ Simple Drag and Drop Reordable List
 
 ## Screenshot
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list/blob/master/projects/ngx-mega-simple-drag-drop-list/screenshot.png?raw=true)
 
 *had to photoshop the little dragging cursor. Guess it will look different in different OS's and browsers
 
