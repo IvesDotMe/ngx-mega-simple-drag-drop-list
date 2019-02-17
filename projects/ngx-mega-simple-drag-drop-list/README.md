@@ -4,11 +4,13 @@
 
 Simple Drag and Drop Reordable List
 
-##Screenshot
+## Screenshot
 
 ![Screenshot](screenshot.png)
 
-##Demo
+*had to photoshop the little dragging cursor. Guess it will look different in different OS's and browsers
+
+## Demo
 
 https://ivesdotme.github.io/NgxMegaSimpleDragDropListDemoWithNpmPackage/
 
