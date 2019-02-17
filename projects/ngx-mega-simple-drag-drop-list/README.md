@@ -4,9 +4,13 @@
 
 Simple Drag and Drop Reordable List
 
+##Screenshot
+
+![Screenshot](screenshot.png)
+
 ##Demo
 
-https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list
+https://ivesdotme.github.io/NgxMegaSimpleDragDropListDemoWithNpmPackage/
 
 ## Install
 
@@ -58,4 +62,19 @@ app.component.html
 <div class="item" *ngFor="let item of items;let index = index;" megaSimpleDndList [items]="items" [index]="index" (dropped)="onDropped($event)">
 	{{item}}
 </div>
+```
+
+
+app.component.css
+
+```css
+.item {
+	width: 200px;
+	border: 1px dashed #808080;
+	margin: 10px;
+	text-align: center;
+	cursor: move;
+	font-size: 20px;
+	padding: 20px;
+}
 ```
