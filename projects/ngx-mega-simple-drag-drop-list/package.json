@@ -1,6 +1,6 @@
 {
 	"name": "ngx-mega-simple-drag-drop-list",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/IvesDotMe/ngx-mega-simple-drag-drop-list.git"
@@ -21,7 +21,12 @@
 		"reordable",
 		"simple",
 		"array",
-		"sortable"
+		"sortable",
+		"ng",
+		"angular",
+		"angular2",
+		"angular2+",
+		"ng2"
 	  ],
 	  "license": "MIT",
 	  "author": "Ives.me"	
