@@ -99,3 +99,21 @@ app.component.css
 	opacity: 0.4;
 }
 ```
+
+## API
+
+### Inputs
+
+| Input  | Type | Default | Required | Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| items | `array` | `any[]` | yes | Array to reorder |
+| index | `number` | null | yes | Index of the current element |
+| hoverStyle | `string` | hover | no | Css class name when hovering |
+| dragStyle | `string` | draggin | no | Css class name when dragging the element |
+| isSwap | `boolean` | `false` | no | Controls if you want to swap items in the array or reorder the whole array |
+
+### Outputs
+
+| Output  | Type | Description |
+| ------------- | ------------- | ------------- |
+| (dropped) | `array` | Returns the array |

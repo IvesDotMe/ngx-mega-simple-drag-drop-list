@@ -8,6 +8,7 @@ export class MegaSimpleDndListDirective {
 	@Input() index: number;
 	@Input() hoverStyle = 'hover';
 	@Input() dragStyle = 'draggin';
+	@Input() isSwap = false;
 	@Output() dropped = new EventEmitter<any[]>();
 
 	@HostBinding() draggable = true;
@@ -42,7 +43,11 @@ export class MegaSimpleDndListDirective {
 	drop($event: DragEvent) {
 		$event.srcElement.classList.remove(this.hoverStyle);
 		const indexSource = Number($event.dataTransfer.getData('indexSource'));
-		[this.items[indexSource], this.items[this.index]] = [this.items[this.index], this.items[indexSource]];
+
+		this.items = (this.isSwap)
+			? this.swapItemsInArray(indexSource, this.index, this.items)
+			: this.reorderArray(indexSource, this.index, this.items);
+
 		this.dropped.emit(this.items);
 		$event.preventDefault();
 	}
@@ -50,6 +55,24 @@ export class MegaSimpleDndListDirective {
 	@HostListener('dragover', ['$event'])
 	dragover($event) {
 		$event.preventDefault();  // prevent default to allow drop
+	}
+
+	private swapItemsInArray = (oldIndex, newIndex, originalArray) => {
+		[originalArray[oldIndex], originalArray[newIndex]] = [originalArray[newIndex], originalArray[oldIndex]];
+		return originalArray;
+	}
+
+	private reorderArray = (oldIndex, newIndex, originalArray) => {
+		const movedItem = originalArray.find((item, index) => index === oldIndex);
+		const remainingItems = originalArray.filter((item, index) => index !== oldIndex);
+
+		const reorderedItems = [
+			...remainingItems.slice(0, newIndex),
+			movedItem,
+			...remainingItems.slice(newIndex)
+		];
+
+		return reorderedItems;
 	}
 
 }
